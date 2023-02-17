@@ -16,7 +16,7 @@ const fetchBreedDescription = (breedName, callback) => {
 
     const bodyObj = JSON.parse(body);
     if (bodyObj.length === 0) {
-      callback(null, 'The requested breed is not found! try again');
+      callback('The requested breed is not found! try again', null);
       return;
     }
     callback(null, bodyObj[0].description);
